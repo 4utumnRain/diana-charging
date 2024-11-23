@@ -1,8 +1,8 @@
 # FIXED
 
 app_EbikeCharger.o: ../app_EbikeCharger.c \
- C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/app_EbikeCharger.h \
- C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_Controller.h \
+ D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/app_EbikeCharger.h \
+ D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_Controller.h \
  syscfg/ti_msp_dl_config.h \
  C:/ti/mspm0_sdk_2_02_00_05/source/ti/devices/msp/msp.h \
  C:/ti/mspm0_sdk_2_02_00_05/source/ti/devices/DeviceFamily.h \
@@ -77,14 +77,14 @@ app_EbikeCharger.o: ../app_EbikeCharger.c \
  C:/ti/mspm0_sdk_2_02_00_05/source/ti/driverlib/dl_wwdt.h \
  C:/ti/mspm0_sdk_2_02_00_05/source/ti/driverlib/m0p/dl_interrupt.h \
  C:/ti/mspm0_sdk_2_02_00_05/source/ti/driverlib/m0p/dl_systick.h \
- C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/GlobalDefinitions.h \
- C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_FixedPointMath.h \
- C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_Profile.h \
- C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/drv_BotLayer.h
+ D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/GlobalDefinitions.h \
+ D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_FixedPointMath.h \
+ D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_Profile.h \
+ D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/drv_BotLayer.h
 
-C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/app_EbikeCharger.h:
+D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/app_EbikeCharger.h:
 
-C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_Controller.h:
+D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_Controller.h:
 
 syscfg/ti_msp_dl_config.h:
 
@@ -234,10 +234,10 @@ C:/ti/mspm0_sdk_2_02_00_05/source/ti/driverlib/m0p/dl_interrupt.h:
 
 C:/ti/mspm0_sdk_2_02_00_05/source/ti/driverlib/m0p/dl_systick.h:
 
-C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/GlobalDefinitions.h:
+D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/GlobalDefinitions.h:
 
-C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_FixedPointMath.h:
+D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_FixedPointMath.h:
 
-C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_Profile.h:
+D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/cal_Profile.h:
 
-C:/Users/khanh/OneDrive\ -\ Evselab\ Co.\ Ltd/Documents/1_Lab_EVSE/0_Master_HUST/2_Diana_Project/RC.2_1.0.0.2_PROE_60V3A_SourceCode/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/drv_BotLayer.h:
+D:/OneDrive\ -\ Hanoi\ University\ of\ Science\ and\ Technology/Lab/All_temp/18-11-2024-Code\ Tran\ Ngat/RC.2_1.0.0.2_PROE_60V3A_SourceCode/drv_BotLayer.h:

@@ -1,12 +1,14 @@
-#include "app_EbikeCharger.h"
-#include "drv_BotLayer.h" //abc xyz ccc abc cccc
-#include "ti_msp_dl_config.h"
+// Standard library
+#include <stdio.h>
+#include <string.h>
+// User Library
+#include "../lib/app_EbikeCharger.h"
+#include "drv_BotLayer.h"
 #include "GlobalDefinitions.h"
-#include "stdio.h"
-#include "string.h"
 #include "System_Recorder.h"
 #include "UARTLib.h"
-
+// .syscfg generated file
+#include "ti_msp_dl_config.h"
 
 
 
