@@ -1,0 +1,14 @@
+"./GlobalDefinitions.o"
+"./syscfg/ti_msp_dl_config.o"
+"./startup_mspm0g350x_ticlang.o"
+"./System_Recorder.o"
+"./UARTLib.o"
+"./app_EbikeCharger.o"
+"./cal_Controller.o"
+"./cal_FixedPointMath.o"
+"./cal_Profile.o"
+"./drv_BotLayer.o"
+"./main.o"
+-l"syscfg/device_linker.cmd"
+-ldevice.cmd.genlibs
+-llibc.a

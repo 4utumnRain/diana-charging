@@ -1,0 +1,919 @@
+******************************************************************************
+            TI ARM Clang Linker PC v3.2.0                      
+******************************************************************************
+>> Linked Mon Jul 15 14:44:43 2024
+
+OUTPUT FILE NAME:   <empty_mspm0g3505_nortos_ticlang.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 000048c1
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00008000  00005020  00002fe0  R  X
+  SRAM                  20200000   00004000  0000058e  00003a72  RW X
+  BCR_CONFIG            41c00000   00000080  00000000  00000080  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00004f70   00004f70    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    00004b60   00004b60    r-x .text
+  00004c20    00004c20    00000350   00000350    r-- .rodata
+00004fb0    00004fb0    00000070   00000070    r--
+  00004fb0    00004fb0    00000060   00000060    r-- .cinit
+  00005010    00005010    00000010   00000010    r-- .binit
+20200000    20200000    0000034e   00000000    rw-
+  20200000    20200000    000002c0   00000000    rw- .bss
+  202002c0    202002c0    0000008e   00000000    rw- .data
+20200350    00004f70    00000040   00000040    r-x
+  20200350    00004f70    00000040   00000040    r-x .TI.ramfunc
+20203e00    20203e00    00000200   00000000    rw-
+  20203e00    20203e00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0g350x_ticlang.o (.intvecs)
+
+.text      0    000000c0    00004b60     
+                  000000c0    00000a00     libc.a : _printfi.c.obj (.text:__TI_printfi)
+                  00000ac0    00000380     System_Recorder.o (.text._Recorder_Execution)
+                  00000e40    0000030c     app_EbikeCharger.o (.text._CHRGR_Set_LED_Indicator)
+                  0000114c    00000280     main.o (.text.main)
+                  000013cc    0000023c     app_EbikeCharger.o (.text._CHRGR_Manage_Charger_Operations_State)
+                  00001608    00000220     libc.a : _printfi.c.obj (.text._pconv_a)
+                  00001828    00000200     System_Recorder.o (.text._Recorder_Check)
+                  00001a28    000001dc     libc.a : _printfi.c.obj (.text._pconv_g)
+                  00001c04    000001cc     app_EbikeCharger.o (.text._CHRGR_Get_Charger_State)
+                  00001dd0    00000192     libclang_rt.builtins.a : adddf3.S.obj (.text.adddf3_subdf3)
+                  00001f62    00000002     startup_mspm0g350x_ticlang.o (.text.Default_Handler)
+                  00001f64    00000180     app_EbikeCharger.o (.text._CHRGR_Lastest_Err_LED_Indicator)
+                  000020e4    00000160     main.o (.text.TIMG0_IRQHandler)
+                  00002244    0000015c     driverlib.a : dl_flashctl.o (.text.DL_FlashCTL_unprotectSector)
+                  000023a0    0000013c     cal_Controller.o (.text._CTRL_getFxDfromVIDualLoopController)
+                  000024dc    0000013c     libc.a : _printfi.c.obj (.text.fcvt)
+                  00002618    00000120            : _printfi.c.obj (.text._pconv_e)
+                  00002738    00000110     driverlib.a : dl_timer.o (.text.DL_Timer_initPWMMode)
+                  00002848    0000010c     System_Recorder.o (.text._Write_Data_To_Flash)
+                  00002954    0000010c     libclang_rt.builtins.a : divdf3.S.obj (.text.__divdf3)
+                  00002a60    00000100     driverlib.a : dl_timer.o (.text.DL_Timer_initTimerMode)
+                  00002b60    000000ec                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_configSYSPLL)
+                  00002c4c    000000ec                 : dl_timer.o (.text.DL_TimerA_initPWMMode)
+                  00002d38    000000e4     libclang_rt.builtins.a : muldf3.S.obj (.text.__muldf3)
+                  00002e1c    000000d8     libc.a : s_scalbn.c.obj (.text.scalbn)
+                  00002ef4    000000bc     ti_msp_dl_config.o (.text.SYSCFG_DL_PWM_0_init)
+                  00002fb0    000000a4     System_Recorder.o (.text._Move_Data_From_Sector_to_Sector)
+                  00003054    000000a2     libclang_rt.builtins.a : udivmoddi4.S.obj (.text)
+                  000030f6    00000002                            : aeabi_div0.c.obj (.text.__aeabi_idiv0)
+                  000030f8    000000a0     drv_BotLayer.o (.text.HAL_setLEDsignals)
+                  00003198    0000009a     libc.a : memcpy16.S.obj (.text:memcpy)
+                  00003232    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_ldiv0)
+                  00003234    00000098     System_Recorder.o (.text._Record_Data_Update)
+                  000032cc    0000008c     ti_msp_dl_config.o (.text.SYSCFG_DL_UART_0_init)
+                  00003358    0000008c     libclang_rt.builtins.a : mulsf3.S.obj (.text.__mulsf3)
+                  000033e4    00000082                            : divsf3.S.obj (.text.__divsf3)
+                  00003466    00000002     --HOLE-- [fill = 0]
+                  00003468    00000080     cal_Profile.o (.text._PRFL_lookup3StageCharging)
+                  000034e8    00000078     ti_msp_dl_config.o (.text.SYSCFG_DL_ADC12_0_init)
+                  00003560    00000078     app_EbikeCharger.o (.text._CHRGR_Execute_Charging_State)
+                  000035d8    00000078     libc.a : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00003650    00000074     ti_msp_dl_config.o (.text.SYSCFG_DL_GPIO_init)
+                  000036c4    00000070     ti_msp_dl_config.o (.text.SYSCFG_DL_initPower)
+                  00003734    00000070     libclang_rt.builtins.a : comparedf2.c.obj (.text.__gedf2)
+                  000037a4    0000006c                            : comparedf2.c.obj (.text.__ledf2)
+                  00003810    00000068     app_EbikeCharger.o (.text._CHRGR_Execute_Close_Loop)
+                  00003878    00000066     libc.a : _printfi.c.obj (.text._mcpy)
+                  000038de    00000002     --HOLE-- [fill = 0]
+                  000038e0    00000062     libclang_rt.builtins.a : aeabi_dcmp.S.obj (.text.__aeabi_dcmp)
+                  00003942    00000062     libc.a : memset16.S.obj (.text:memset)
+                  000039a4    0000005c     ti_msp_dl_config.o (.text.SYSCFG_DL_SYSCTL_init)
+                  00003a00    0000005c     libc.a : s_frexp.c.obj (.text.frexp)
+                  00003a5c    00000058     ti_msp_dl_config.o (.text.SYSCFG_DL_FANPWM_init)
+                  00003ab4    00000058     ti_msp_dl_config.o (.text.SYSCFG_DL_init)
+                  00003b0c    00000058     libc.a : _ltoa.c.obj (.text.__TI_ltoa)
+                  00003b64    00000058            : _printfi.c.obj (.text._pconv_f)
+                  00003bbc    00000056     libclang_rt.builtins.a : aeabi_idivmod.S.obj (.text.__aeabi_idivmod)
+                  00003c12    00000054     driverlib.a : dl_dma.o (.text.DL_DMA_configTransfer)
+                  00003c66    00000002     --HOLE-- [fill = 0]
+                  00003c68    00000054     drv_BotLayer.o (.text.HAL_initSystem)
+                  00003cbc    00000054     cal_Profile.o (.text.PRFL_getTemperatureDeratingCurrent)
+                  00003d10    00000054     ti_msp_dl_config.o (.text.SYSCFG_DL_COMP_0_init)
+                  00003d64    00000054     ti_msp_dl_config.o (.text.SYSCFG_DL_ISRTIMER_init)
+                  00003db8    00000052     driverlib.a : dl_flashctl.o (.text.DL_FlashCTL_getFlashSectorNumberInBank)
+                  00003e0a    00000052     libc.a : _printfi.c.obj (.text._ecpy)
+                  00003e5c    00000050     app_EbikeCharger.o (.text._CHRGR_Execute_System_Stop)
+                  00003eac    0000004c     driverlib.a : dl_adc12.o (.text.DL_ADC12_setClockConfig)
+                  00003ef8    0000004c                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK)
+                  00003f44    0000004c                 : dl_uart.o (.text.DL_UART_init)
+                  00003f90    0000004c     app_EbikeCharger.o (.text._CHRGR_Execute_HandShake_State)
+                  00003fdc    0000004c     libc.a : cpy_tbl.c.obj (.text.copy_in)
+                  00004028    0000004c            : autoinit.c.obj (.text:__TI_auto_init_nopinit)
+                  00004074    0000004a     libclang_rt.builtins.a : fixdfsi.S.obj (.text.__fixdfsi)
+                  000040be    00000046     driverlib.a : dl_dma.o (.text.DL_DMA_initChannel)
+                  00004104    00000044     cal_Profile.o (.text.PRFL_getTemperatureDeratingFAN)
+                  00004148    00000040     driverlib.a : dl_timer.o (.text.DL_Timer_setCaptureCompareOutCtl)
+                  00004188    00000040     drv_BotLayer.o (.text.HAL_setPFM)
+                  000041c8    00000040     app_EbikeCharger.o (.text._CHRGR_Execute_Battery_Check_State)
+                  00004208    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
+                  00004248    00000040                            : extendsfdf2.S.obj (.text.__extendsfdf2)
+                  00004288    00000040     libc.a : atoi.c.obj (.text.atoi)
+                  000042c8    0000003c     driverlib.a : dl_flashctl.o (.text.DL_FactoryRegion_getNumBanks)
+                  00004304    0000003c                 : dl_timer.o (.text.DL_Timer_setCaptureCompareCtl)
+                  00004340    0000003a     libclang_rt.builtins.a : muldsi3.S.obj (.text.__muldsi3)
+                  0000437a    00000002     --HOLE-- [fill = 0]
+                  0000437c    00000038     driverlib.a : dl_dma.o (.text.DL_DMA_setTrigger)
+                  000043b4    00000038                 : dl_flashctl.o (.text.DL_FactoryRegion_getMAINFlashSize)
+                  000043ec    00000038                 : dl_flashctl.o (.text.DL_FlashCTL_programMemory64Config)
+                  00004424    00000038     GlobalDefinitions.o (.text.Waiting)
+                  0000445c    00000038     cal_Controller.o (.text._CTRL_Reset_Dual_Controller)
+                  00004494    00000038     libclang_rt.builtins.a : fixsfsi.S.obj (.text.__fixsfsi)
+                  000044cc    00000038     libc.a : sprintf.c.obj (.text.sprintf)
+                  00004504    00000034     driverlib.a : dl_timer.o (.text.DL_Timer_setCaptCompUpdateMethod)
+                  00004538    00000034                 : dl_timer.o (.text.DL_Timer_setCaptureCompareAction)
+                  0000456c    00000034                 : dl_timer.o (.text.DL_Timer_setCaptureCompareInput)
+                  000045a0    00000034                 : dl_timer.o (.text.DL_Timer_setClockConfig)
+                  000045d4    00000034                 : dl_timer.o (.text.DL_Timer_setFaultSourceConfig)
+                  00004608    00000030                 : dl_flashctl.o (.text.DL_FlashCTL_eraseMemoryFromRAM)
+                  00004638    00000010                 : dl_flashctl.o (.tramp.DL_FlashCTL_executeCommandFromRAM.1)
+                  00004648    00000030                 : dl_flashctl.o (.text.DL_FlashCTL_programMemoryConfig)
+                  00004678    00000030     libc.a : _printfi.c.obj (.text._fcpy)
+                  000046a8    0000002c     driverlib.a : dl_timer.o (.text.DL_Timer_setCaptureCompareValue)
+                  000046d4    0000002c     drv_BotLayer.o (.text.HAL_setPFWM)
+                  00004700    0000002c     ti_msp_dl_config.o (.text.SYSCFG_DL_MACHINECYCLETIMER_init)
+                  0000472c    0000002c     libclang_rt.builtins.a : floatsidf.S.obj (.text.__floatsidf)
+                  00004758    00000028     driverlib.a : dl_adc12.o (.text.DL_Common_updateReg)
+                  00004780    00000028                 : dl_dma.o (.text.DL_Common_updateReg)
+                  000047a8    00000028                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_Common_updateReg)
+                  000047d0    00000028                 : dl_timer.o (.text.DL_Common_updateReg)
+                  000047f8    00000028                 : dl_uart.o (.text.DL_Common_updateReg)
+                  00004820    00000028                 : dl_timer.o (.text.DL_Timer_getCaptureCompareValue)
+                  00004848    00000028     GlobalDefinitions.o (.text.Delay_100us)
+                  00004870    00000028     app_EbikeCharger.o (.text._CHRGR_Execute_Soft_Start_State)
+                  00004898    00000028     libclang_rt.builtins.a : floatunsisf.S.obj (.text.__floatunsisf)
+                  000048c0    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  000048e8    00000024     driverlib.a : dl_flashctl.o (.text.DL_FlashCTL_programMemoryFromRAM64WithECCGenerated)
+                  0000490c    00000024                 : dl_uart.o (.text.DL_UART_setClockConfig)
+                  00004930    00000024     libclang_rt.builtins.a : muldi3.S.obj (.text.__muldi3)
+                  00004954    00000022     libc.a : memccpy.c.obj (.text.memccpy)
+                  00004976    00000002     --HOLE-- [fill = 0]
+                  00004978    00000020     driverlib.a : dl_flashctl.o (.text.DL_CORE_configInstruction)
+                  00004998    00000020                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_CORE_configInstruction)
+                  000049b8    00000020                 : dl_timer.o (.text.DL_Timer_setCounterValueAfterEnable)
+                  000049d8    0000001e     libclang_rt.builtins.a : ashldi3.S.obj (.text.__ashldi3)
+                  000049f6    00000002     --HOLE-- [fill = 0]
+                  000049f8    0000001c     drv_BotLayer.o (.text.HAL_receiveUARTMessage)
+                  00004a14    0000001c     drv_BotLayer.o (.text.HAL_transmitUARTMessage)
+                  00004a30    00000018     driverlib.a : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_setHSCLKSource)
+                  00004a48    00000018                 : dl_timer.o (.text.DL_Timer_setLoadValue)
+                  00004a60    00000018     ti_msp_dl_config.o (.text.SYSCFG_DL_DMA_CH_RX_init)
+                  00004a78    00000018     ti_msp_dl_config.o (.text.SYSCFG_DL_DMA_CH_TX_init)
+                  00004a90    00000018     libc.a : sprintf.c.obj (.text._outs)
+                  00004aa8    00000016     driverlib.a : dl_uart.o (.text.DL_UART_disable)
+                  00004abe    00000016     libc.a : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00004ad4    00000014     driverlib.a : dl_common.o (.text.DL_Common_delayCycles)
+                  00004ae8    00000014                 : dl_flashctl.o (.text.DL_FlashCTL_setCommandAddress)
+                  00004afc    00000014                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_disableSYSPLL)
+                  00004b10    00000014     libclang_rt.builtins.a : aeabi_uldivmod.S.obj (.text.__aeabi_uldivmod)
+                  00004b24    00000014     libc.a : _printfi.c.obj (.text.strchr)
+                  00004b38    00000012            : copy_decompress_none.c.obj (.text:decompress:none)
+                  00004b4a    00000002     --HOLE-- [fill = 0]
+                  00004b4c    00000010     driverlib.a : dl_flashctl.o (.text.DL_CORE_getInstructionConfig)
+                  00004b5c    00000010                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_CORE_getInstructionConfig)
+                  00004b6c    00000010     libc.a : wcslen.c.obj (.text.wcslen)
+                  00004b7c    0000000e     driverlib.a : dl_flashctl.o (.text.DL_FlashCTL_getFlashSectorNumber)
+                  00004b8a    00000002     --HOLE-- [fill = 0]
+                  00004b8c    0000000e     libclang_rt.builtins.a : aeabi_memset.S.obj (.text.__aeabi_memset)
+                  00004b9a    0000000e     libc.a : _printfi.c.obj (.text.strlen)
+                  00004ba8    0000000c     driverlib.a : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_getClockStatus)
+                  00004bb4    0000000c     ti_msp_dl_config.o (.text.SYSCFG_DL_DMA_init)
+                  00004bc0    0000000c     cal_Controller.o (.text._CTRL_Get_Ramp_Up_Value)
+                  00004bcc    0000000a     libc.a : _printfi.c.obj (.text.OUTLINED_FUNCTION_0)
+                  00004bd6    00000002     --HOLE-- [fill = 0]
+                  00004bd8    00000010     libclang_rt.builtins.a : adddf3.S.obj (.tramp.__aeabi_dsub.1)
+                  00004be8    0000000a     libc.a : _printfi.c.obj (.text.OUTLINED_FUNCTION_1)
+                  00004bf2    0000000a            : sprintf.c.obj (.text._outc)
+                  00004bfc    00000008            : aeabi_portable.c.obj (.text.__aeabi_errno_addr)
+                  00004c04    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
+                  00004c0c    00000004     driverlib.a : dl_flashctl.o (.text.DL_SYSCTL_isExecuteFromUpperFlashBank)
+                  00004c10    00000004     startup_mspm0g350x_ticlang.o (.text.Reset_Handler)
+                  00004c14    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  00004c18    00000004            : exit.c.obj (.text:abort)
+                  00004c1c    00000004     --HOLE-- [fill = 0]
+
+.TI.ramfunc 
+*          0    00004f70    00000040     RUN ADDR = 20200350
+                  00004f70    00000040     driverlib.a : dl_flashctl.o (.TI.ramfunc)
+
+.cinit     0    00004fb0    00000060     
+                  00004fb0    0000003a     (.cinit..data.load) [load image, compression = lzss]
+                  00004fea    00000002     --HOLE-- [fill = 0]
+                  00004fec    0000000c     (__TI_handler_table)
+                  00004ff8    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00005000    00000010     (__TI_cinit_table)
+
+.rodata    0    00004c20    00000350     
+                  00004c20    00000101     libc.a : aeabi_ctype.S.obj (.rodata:__aeabi_ctype_table_)
+                  00004d21    00000064     System_Recorder.o (.rodata.str1.151386154206397035201)
+                  00004d85    0000005b     System_Recorder.o (.rodata.str1.17503736760117533011)
+                  00004de0    0000002e     main.o (.rodata.str1.176328792963337784071)
+                  00004e0e    00000002     ti_msp_dl_config.o (.rodata.gUART_0ClockConfig)
+                  00004e10    00000028     ti_msp_dl_config.o (.rodata.gSYSPLLConfig)
+                  00004e38    0000001c     cal_Controller.o (.rodata..L__const._CTRL_Lookup_Adaptive_Controller_Parameters_Table.KIIAXIS_q15)
+                  00004e54    00000018     ti_msp_dl_config.o (.rodata.gDMA_CH_RXConfig)
+                  00004e6c    00000018     ti_msp_dl_config.o (.rodata.gDMA_CH_TXConfig)
+                  00004e84    00000014     ti_msp_dl_config.o (.rodata.gISRTIMERTimerConfig)
+                  00004e98    00000014     ti_msp_dl_config.o (.rodata.gMACHINECYCLETIMERTimerConfig)
+                  00004eac    00000011     libc.a : _printfi.c.obj (.rodata.str1.11645776875810915891)
+                  00004ebd    00000011            : _printfi.c.obj (.rodata.str1.44690500295887128011)
+                  00004ece    0000000a     ti_msp_dl_config.o (.rodata.gUART_0Config)
+                  00004ed8    00000008     ti_msp_dl_config.o (.rodata.gADC12_0ClockConfig)
+                  00004ee0    00000008     ti_msp_dl_config.o (.rodata.gFANPWMConfig)
+                  00004ee8    00000008     ti_msp_dl_config.o (.rodata.gPWM_0Config)
+                  00004ef0    00000008     app_EbikeCharger.o (.rodata.str1.121104974910855088461)
+                  00004ef8    00000006     app_EbikeCharger.o (.rodata.str1.58186842728182434201)
+                  00004efe    00000006     app_EbikeCharger.o (.rodata.str1.60516506075851817401)
+                  00004f04    00000006     app_EbikeCharger.o (.rodata.str1.98126339062314055871)
+                  00004f0a    00000005     app_EbikeCharger.o (.rodata.str1.27824401447587315211)
+                  00004f0f    00000005     app_EbikeCharger.o (.rodata.str1.3020569482315228311)
+                  00004f14    00000005     app_EbikeCharger.o (.rodata.str1.35216097591784120681)
+                  00004f19    00000005     app_EbikeCharger.o (.rodata.str1.38998040862683470891)
+                  00004f1e    00000005     app_EbikeCharger.o (.rodata.str1.49108489018028324811)
+                  00004f23    00000005     app_EbikeCharger.o (.rodata.str1.51438460594645498351)
+                  00004f28    00000005     app_EbikeCharger.o (.rodata.str1.69453212631884772251)
+                  00004f2d    00000005     app_EbikeCharger.o (.rodata.str1.7174347040898320731)
+                  00004f32    00000005     app_EbikeCharger.o (.rodata.str1.91707343317986669391)
+                  00004f37    00000004     app_EbikeCharger.o (.rodata.str1.101596428904660231231)
+                  00004f3b    00000004     app_EbikeCharger.o (.rodata.str1.110849698938500407711)
+                  00004f3f    00000004     app_EbikeCharger.o (.rodata.str1.171440934964488608931)
+                  00004f43    00000004     app_EbikeCharger.o (.rodata.str1.55838149061864537251)
+                  00004f47    00000004     app_EbikeCharger.o (.rodata.str1.72541494306389476101)
+                  00004f4b    00000004     app_EbikeCharger.o (.rodata.str1.90858662959452885331)
+                  00004f4f    00000003     ti_msp_dl_config.o (.rodata.gFANPWMClockConfig)
+                  00004f52    00000003     ti_msp_dl_config.o (.rodata.gISRTIMERClockConfig)
+                  00004f55    00000003     ti_msp_dl_config.o (.rodata.gMACHINECYCLETIMERClockConfig)
+                  00004f58    00000003     ti_msp_dl_config.o (.rodata.gPWM_0ClockConfig)
+                  00004f5b    00000003     app_EbikeCharger.o (.rodata.str1.103680943036155430491)
+                  00004f5e    00000003     app_EbikeCharger.o (.rodata.str1.171421909723353226891)
+                  00004f61    00000003     app_EbikeCharger.o (.rodata.str1.95005345185864606401)
+                  00004f64    0000000c     --HOLE-- [fill = 0]
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.binit     0    00005010    00000010     
+                  00005010    00000010     (.binit)
+
+.bss       0    20200000    000002c0     UNINITIALIZED
+                  20200000    000000bc     (.common:gPWM_0Backup)
+                  202000bc    00000078     (.common:gFANPWMBackup)
+                  20200134    00000078     (.common:gMACHINECYCLETIMERBackup)
+                  202001ac    00000064     (.common:txUART)
+                  20200210    00000030     (.common:ReadPackage)
+                  20200240    00000030     (.common:WritePackage)
+                  20200270    00000030     (.common:gUART_0Backup)
+                  202002a0    00000008     (.common:ADCbuffer)
+                  202002a8    00000004     cal_Controller.o (.bss._CTRL_getFxDfromVIDualLoopController.fx_q15)
+                  202002ac    00000004     (.common:Charge_Time_10ms)
+                  202002b0    00000004     (.common:Global_Time)
+                  202002b4    00000004     (.common:Over_Time_Threshold)
+                  202002b8    00000004     (.common:WatchDog_Time)
+                  202002bc    00000001     System_Recorder.o (.bss._Recorder_Execution.lastStateOfCharger)
+                  202002bd    00000001     (.common:Charger_State)
+                  202002be    00000001     (.common:Print_Saved_State)
+                  202002bf    00000001     (.common:rxUART)
+
+.data      0    202002c0    0000008e     UNINITIALIZED
+                  202002c0    00000020     app_EbikeCharger.o (.data._CHRGR_Execute_Charging_State.ControlParams)
+                  202002e0    00000020     app_EbikeCharger.o (.data._CHRGR_Execute_Close_Loop.CONTROLPARAMS)
+                  20200300    00000004     GlobalDefinitions.o (.data.Delay_100us.delay_100us_count)
+                  20200304    00000004     cal_Profile.o (.data.PRFL_getTemperatureDeratingCurrent.Temperature_Sampling_Time)
+                  20200308    00000004     cal_Profile.o (.data.PRFL_getTemperatureDeratingFAN.Temperature_Sampling_Time)
+                  2020030c    00000004     main.o (.data.TIMG0_IRQHandler.MemoryIndicateTime)
+                  20200310    00000004     main.o (.data.TIMG0_IRQHandler.OverflowCnt)
+                  20200314    00000004     GlobalDefinitions.o (.data.Waiting.cnt)
+                  20200318    00000004     app_EbikeCharger.o (.data._CHRGR_Execute_HandShake_State.Cnt)
+                  2020031c    00000004     app_EbikeCharger.o (.data._CHRGR_Execute_System_Stop.Cnt)
+                  20200320    00000004     app_EbikeCharger.o (.data._CHRGR_Manage_Charger_Operations_State.CntOfIVP)
+                  20200324    00000004     app_EbikeCharger.o (.data._CHRGR_Set_LED_Indicator.Cnt)
+                  20200328    00000004     cal_Controller.o (.data._CTRL_getFxDfromVIDualLoopController.dx_q15)
+                  2020032c    00000004     cal_Controller.o (.data._CTRL_getFxDfromVIDualLoopController.iid_q15)
+                  20200330    00000004     cal_Controller.o (.data._CTRL_getFxDfromVIDualLoopController.iif_q15)
+                  20200334    00000004     cal_Controller.o (.data._CTRL_getFxDfromVIDualLoopController.iv_q15)
+                  20200338    00000004     cal_Profile.o (.data._PRFL_lookup3StageCharging.iRampUp)
+                  2020033c    00000004     libc.a : aeabi_portable.c.obj (.data.__aeabi_errno)
+                  20200340    00000002     main.o (.data.D)
+                  20200342    00000002     main.o (.data.Fsw)
+                  20200344    00000002     main.o (.data.Tsw)
+                  20200346    00000002     app_EbikeCharger.o (.data._CHRGR_Manage_Charger_Operations_State.TimCnt)
+                  20200348    00000002     main.o (.data.time_measure)
+                  2020034a    00000001     app_EbikeCharger.o (.data._CHRGR_Set_LED_Indicator.PreviousChargerState)
+                  2020034b    00000001     cal_Profile.o (.data._PRFL_lookup3StageCharging.Charging_Stage)
+                  2020034c    00000001     cal_Controller.o (.data._CTRL_getFxDfromVIDualLoopController.mode)
+                  2020034d    00000001     System_Recorder.o (.data._Recorder_Execution.MemoryArrangeFlag)
+
+.stack     0    20203e00    00000200     UNINITIALIZED
+                  20203e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20203e04    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20200000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20200000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code    ro data   rw data
+       ------                         ----    -------   -------
+    .\
+       app_EbikeCharger.o             2680    104       83     
+       System_Recorder.o              1992    191       19     
+       main.o                         992     46        113    
+       cal_Controller.o               384     28        21     
+       drv_BotLayer.o                 408     0         0      
+       cal_Profile.o                  280     0         13     
+       GlobalDefinitions.o            96      0         117    
+       startup_mspm0g350x_ticlang.o   6       192       0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         6838    561       366    
+                                                               
+    .\syscfg\
+       ti_msp_dl_config.o             1216    176       476    
+    +--+------------------------------+-------+---------+---------+
+       Total:                         1216    176       476    
+                                                               
+    C:/ti/mspm0_sdk_2_01_00_03/source/ti/driverlib/lib/ticlang/m0p/mspm0g1x0x_g3x0x/driverlib.a
+       dl_timer.o                     1328    0         0      
+       dl_flashctl.o                  964     0         0      
+       dl_sysctl_mspm0g1x0x_g3x0x.o   456     0         0      
+       dl_dma.o                       250     0         0      
+       dl_uart.o                      174     0         0      
+       dl_adc12.o                     116     0         0      
+       dl_common.o                    20      0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         3308    0         0      
+                                                               
+    C:\ti\ccs1250\ccs\tools\compiler\ti-cgt-armllvm_3.2.0.LTS\lib\armv6m-ti-none-eabi/c/libc.a
+       _printfi.c.obj                 4558    34        0      
+       aeabi_ctype.S.obj              0       257       0      
+       s_scalbn.c.obj                 216     0         0      
+       memcpy16.S.obj                 154     0         0      
+       copy_decompress_lzss.c.obj     120     0         0      
+       memset16.S.obj                 98      0         0      
+       s_frexp.c.obj                  92      0         0      
+       sprintf.c.obj                  90      0         0      
+       _ltoa.c.obj                    88      0         0      
+       autoinit.c.obj                 76      0         0      
+       cpy_tbl.c.obj                  76      0         0      
+       atoi.c.obj                     64      0         0      
+       boot_cortex_m.c.obj            40      0         0      
+       memccpy.c.obj                  34      0         0      
+       copy_zero_init.c.obj           22      0         0      
+       copy_decompress_none.c.obj     18      0         0      
+       wcslen.c.obj                   16      0         0      
+       aeabi_portable.c.obj           8       0         4      
+       exit.c.obj                     4       0         0      
+       pre_init.c.obj                 4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         5778    291       4      
+                                                               
+    C:\ti\ccs1250\ccs\tools\compiler\ti-cgt-armllvm_3.2.0.LTS\lib\clang/15.0.7/lib/armv6m-ti-none-eabi/libclang_rt.builtins.a
+       adddf3.S.obj                   418     0         0      
+       divdf3.S.obj                   268     0         0      
+       muldf3.S.obj                   228     0         0      
+       comparedf2.c.obj               220     0         0      
+       udivmoddi4.S.obj               162     0         0      
+       mulsf3.S.obj                   140     0         0      
+       divsf3.S.obj                   130     0         0      
+       aeabi_dcmp.S.obj               98      0         0      
+       aeabi_idivmod.S.obj            86      0         0      
+       fixdfsi.S.obj                  74      0         0      
+       aeabi_uidivmod.S.obj           64      0         0      
+       extendsfdf2.S.obj              64      0         0      
+       muldsi3.S.obj                  58      0         0      
+       fixsfsi.S.obj                  56      0         0      
+       floatsidf.S.obj                44      0         0      
+       floatunsisf.S.obj              40      0         0      
+       muldi3.S.obj                   36      0         0      
+       ashldi3.S.obj                  30      0         0      
+       aeabi_uldivmod.S.obj           20      0         0      
+       aeabi_memset.S.obj             14      0         0      
+       aeabi_memcpy.S.obj             8       0         0      
+       aeabi_div0.c.obj               4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         2262    0         0      
+                                                               
+       Stack:                         0       0         512    
+       Linker Generated:              0       110       0      
+    +--+------------------------------+-------+---------+---------+
+       Grand Total:                   19402   1138      1358   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00005000 records: 2, size/record: 8, table size: 16
+	.data: load addr=00004fb0, load size=0000003a bytes, run addr=202002c0, run size=0000008e bytes, compression=lzss
+	.bss: load addr=00004ff8, load size=00000008 bytes, run addr=20200000, run size=000002c0 bytes, compression=zero_init
+binit @ 00005010 records: 1, size/record: 12, table size: 16
+	.TI.ramfunc: load addr=00004f70, load size=00000040, run addr=20200350, run size=00000040, compression=none
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00004fec records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+FAR CALL TRAMPOLINES
+
+callee name               trampoline name
+   callee addr  tramp addr   call addr  call info
+--------------  -----------  ---------  ----------------
+DL_FlashCTL_executeCommandFromRAM  $Tramp$TT$L$PI$$DL_FlashCTL_executeCommandFromRAM
+   20200351     00004638     0000462a   driverlib.a : dl_flashctl.o (.text.DL_FlashCTL_eraseMemoryFromRAM)
+                             00004900               : dl_flashctl.o (.text.DL_FlashCTL_programMemoryFromRAM64WithECCGenerated)
+__aeabi_dsub              $Tramp$TT$L$PI$$__aeabi_dsub
+   00001dd1     00004bd8     00004bd4   libc.a : _printfi.c.obj (.text.OUTLINED_FUNCTION_0)
+
+[2 trampolines]
+[3 trampoline calls]
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                              
+-------   ----                                              
+00001f63  ADC0_IRQHandler                                   
+00001f63  ADC1_IRQHandler                                   
+202002a0  ADCbuffer                                         
+00001f63  AES_IRQHandler                                    
+00004c18  C$$EXIT                                           
+00001f63  CANFD0_IRQHandler                                 
+202002ac  Charge_Time_10ms                                  
+202002bd  Charger_State                                     
+20200340  D                                                 
+00001f63  DAC0_IRQHandler                                   
+00003ead  DL_ADC12_setClockConfig                           
+00004ad5  DL_Common_delayCycles                             
+000040bf  DL_DMA_initChannel                                
+00004609  DL_FlashCTL_eraseMemoryFromRAM                    
+000048e9  DL_FlashCTL_programMemoryFromRAM64WithECCGenerated
+00002245  DL_FlashCTL_unprotectSector                       
+00002b61  DL_SYSCTL_configSYSPLL                            
+00003ef9  DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK             
+00002c4d  DL_TimerA_initPWMMode                             
+00004821  DL_Timer_getCaptureCompareValue                   
+00002739  DL_Timer_initPWMMode                              
+00002a61  DL_Timer_initTimerMode                            
+00004505  DL_Timer_setCaptCompUpdateMethod                  
+00004539  DL_Timer_setCaptureCompareAction                  
+00004305  DL_Timer_setCaptureCompareCtl                     
+0000456d  DL_Timer_setCaptureCompareInput                   
+00004149  DL_Timer_setCaptureCompareOutCtl                  
+000046a9  DL_Timer_setCaptureCompareValue                   
+000045a1  DL_Timer_setClockConfig                           
+000045d5  DL_Timer_setFaultSourceConfig                     
+00003f45  DL_UART_init                                      
+0000490d  DL_UART_setClockConfig                            
+00001f63  DMA_IRQHandler                                    
+00001f63  Default_Handler                                   
+00004849  Delay_100us                                       
+20200342  Fsw                                               
+00001f63  GROUP0_IRQHandler                                 
+00001f63  GROUP1_IRQHandler                                 
+202002b0  Global_Time                                       
+00003c69  HAL_initSystem                                    
+000049f9  HAL_receiveUARTMessage                            
+000030f9  HAL_setLEDsignals                                 
+00004189  HAL_setPFM                                        
+000046d5  HAL_setPFWM                                       
+00004a15  HAL_transmitUARTMessage                           
+00001f63  HardFault_Handler                                 
+00001f63  I2C0_IRQHandler                                   
+00001f63  I2C1_IRQHandler                                   
+00001f63  NMI_Handler                                       
+202002b4  Over_Time_Threshold                               
+00003cbd  PRFL_getTemperatureDeratingCurrent                
+00004105  PRFL_getTemperatureDeratingFAN                    
+00001f63  PendSV_Handler                                    
+202002be  Print_Saved_State                                 
+00001f63  RTC_IRQHandler                                    
+20200210  ReadPackage                                       
+00004c11  Reset_Handler                                     
+00001f63  SPI0_IRQHandler                                   
+00001f63  SPI1_IRQHandler                                   
+00001f63  SVC_Handler                                       
+000034e9  SYSCFG_DL_ADC12_0_init                            
+00003d11  SYSCFG_DL_COMP_0_init                             
+00004a61  SYSCFG_DL_DMA_CH_RX_init                          
+00004a79  SYSCFG_DL_DMA_CH_TX_init                          
+00004bb5  SYSCFG_DL_DMA_init                                
+00003a5d  SYSCFG_DL_FANPWM_init                             
+00003651  SYSCFG_DL_GPIO_init                               
+00003d65  SYSCFG_DL_ISRTIMER_init                           
+00004701  SYSCFG_DL_MACHINECYCLETIMER_init                  
+00002ef5  SYSCFG_DL_PWM_0_init                              
+000039a5  SYSCFG_DL_SYSCTL_init                             
+000032cd  SYSCFG_DL_UART_0_init                             
+00003ab5  SYSCFG_DL_init                                    
+000036c5  SYSCFG_DL_initPower                               
+00001f63  SysTick_Handler                                   
+00001f63  TIMA0_IRQHandler                                  
+00001f63  TIMA1_IRQHandler                                  
+000020e5  TIMG0_IRQHandler                                  
+00001f63  TIMG12_IRQHandler                                 
+00001f63  TIMG6_IRQHandler                                  
+00001f63  TIMG7_IRQHandler                                  
+00001f63  TIMG8_IRQHandler                                  
+20200344  Tsw                                               
+00001f63  UART0_IRQHandler                                  
+00001f63  UART1_IRQHandler                                  
+00001f63  UART2_IRQHandler                                  
+00001f63  UART3_IRQHandler                                  
+00004425  Waiting                                           
+202002b8  WatchDog_Time                                     
+20200240  WritePackage                                      
+000041c9  _CHRGR_Execute_Battery_Check_State                
+00003561  _CHRGR_Execute_Charging_State                     
+00003811  _CHRGR_Execute_Close_Loop                         
+00003f91  _CHRGR_Execute_HandShake_State                    
+00004871  _CHRGR_Execute_Soft_Start_State                   
+00003e5d  _CHRGR_Execute_System_Stop                        
+00001c05  _CHRGR_Get_Charger_State                          
+00001f65  _CHRGR_Lastest_Err_LED_Indicator                  
+000013cd  _CHRGR_Manage_Charger_Operations_State            
+00000e41  _CHRGR_Set_LED_Indicator                          
+00004bc1  _CTRL_Get_Ramp_Up_Value                           
+0000445d  _CTRL_Reset_Dual_Controller                       
+000023a1  _CTRL_getFxDfromVIDualLoopController              
+00002fb1  _Move_Data_From_Sector_to_Sector                  
+00003469  _PRFL_lookup3StageCharging                        
+00003235  _Record_Data_Update                               
+00001829  _Recorder_Check                                   
+00000ac1  _Recorder_Execution                               
+00002849  _Write_Data_To_Flash                              
+20204000  __STACK_END                                       
+00000200  __STACK_SIZE                                      
+00000000  __TI_ATRegion0_region_sz                          
+00000000  __TI_ATRegion0_src_addr                           
+00000000  __TI_ATRegion0_trg_addr                           
+00000000  __TI_ATRegion1_region_sz                          
+00000000  __TI_ATRegion1_src_addr                           
+00000000  __TI_ATRegion1_trg_addr                           
+00000000  __TI_ATRegion2_region_sz                          
+00000000  __TI_ATRegion2_src_addr                           
+00000000  __TI_ATRegion2_trg_addr                           
+00005000  __TI_CINIT_Base                                   
+00005010  __TI_CINIT_Limit                                  
+00005010  __TI_CINIT_Warm                                   
+00004fec  __TI_Handler_Table_Base                           
+00004ff8  __TI_Handler_Table_Limit                          
+00004029  __TI_auto_init_nopinit                            
+000035d9  __TI_decompress_lzss                              
+00004b39  __TI_decompress_none                              
+00003b0d  __TI_ltoa                                         
+ffffffff  __TI_pprof_out_hndl                               
+000000c1  __TI_printfi                                      
+ffffffff  __TI_prof_data_size                               
+ffffffff  __TI_prof_data_start                              
+00000000  __TI_static_base__                                
+00005010  __TI_table_binit                                  
+00004abf  __TI_zero_init_nomemset                           
+00001ddb  __adddf3                                          
+00004c20  __aeabi_ctype_table_                              
+00004c20  __aeabi_ctype_table_C                             
+00004075  __aeabi_d2iz                                      
+00001ddb  __aeabi_dadd                                      
+000038e1  __aeabi_dcmpeq                                    
+0000391d  __aeabi_dcmpge                                    
+00003931  __aeabi_dcmpgt                                    
+00003909  __aeabi_dcmple                                    
+000038f5  __aeabi_dcmplt                                    
+00002955  __aeabi_ddiv                                      
+00002d39  __aeabi_dmul                                      
+00001dd1  __aeabi_dsub                                      
+2020033c  __aeabi_errno                                     
+00004bfd  __aeabi_errno_addr                                
+00004249  __aeabi_f2d                                       
+00004495  __aeabi_f2iz                                      
+000033e5  __aeabi_fdiv                                      
+00003359  __aeabi_fmul                                      
+0000472d  __aeabi_i2d                                       
+00003bbd  __aeabi_idiv                                      
+000030f7  __aeabi_idiv0                                     
+00003bbd  __aeabi_idivmod                                   
+00003233  __aeabi_ldiv0                                     
+000049d9  __aeabi_llsl                                      
+00004931  __aeabi_lmul                                      
+00004c05  __aeabi_memcpy                                    
+00004c05  __aeabi_memcpy4                                   
+00004c05  __aeabi_memcpy8                                   
+00004b8d  __aeabi_memset                                    
+00004b8d  __aeabi_memset4                                   
+00004b8d  __aeabi_memset8                                   
+00004899  __aeabi_ui2f                                      
+00004209  __aeabi_uidiv                                     
+00004209  __aeabi_uidivmod                                  
+00004b11  __aeabi_uldivmod                                  
+000049d9  __ashldi3                                         
+00005010  __binit__                                         
+000037a5  __cmpdf2                                          
+00002955  __divdf3                                          
+000033e5  __divsf3                                          
+000037a5  __eqdf2                                           
+00004249  __extendsfdf2                                     
+00004075  __fixdfsi                                         
+00004495  __fixsfsi                                         
+0000472d  __floatsidf                                       
+00004899  __floatunsisf                                     
+00003735  __gedf2                                           
+00003735  __gtdf2                                           
+000037a5  __ledf2                                           
+000037a5  __ltdf2                                           
+UNDEFED   __mpu_init                                        
+00002d39  __muldf3                                          
+00004931  __muldi3                                          
+00004341  __muldsi3                                         
+00003359  __mulsf3                                          
+000037a5  __nedf2                                           
+20203e00  __stack                                           
+20200000  __start___llvm_prf_bits                           
+20200000  __start___llvm_prf_cnts                           
+20200000  __stop___llvm_prf_bits                            
+20200000  __stop___llvm_prf_cnts                            
+00001dd1  __subdf3                                          
+00003055  __udivmoddi4                                      
+000048c1  _c_int00_noargs                                   
+UNDEFED   _system_post_cinit                                
+00004c15  _system_pre_init                                  
+00004c19  abort                                             
+00004289  atoi                                              
+00005010  binit                                             
+00003fdd  copy_in                                           
+00003a01  frexp                                             
+00003a01  frexpl                                            
+202000bc  gFANPWMBackup                                     
+20200134  gMACHINECYCLETIMERBackup                          
+20200000  gPWM_0Backup                                      
+20200270  gUART_0Backup                                     
+00000000  interruptVectors                                  
+00002e1d  ldexp                                             
+00002e1d  ldexpl                                            
+0000114d  main                                              
+00004955  memccpy                                           
+00003199  memcpy                                            
+00003943  memset                                            
+202002bf  rxUART                                            
+00002e1d  scalbn                                            
+00002e1d  scalbnl                                           
+000044cd  sprintf                                           
+20200348  time_measure                                      
+202001ac  txUART                                            
+00004b6d  wcslen                                            
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                              
+-------   ----                                              
+00000000  __TI_ATRegion0_region_sz                          
+00000000  __TI_ATRegion0_src_addr                           
+00000000  __TI_ATRegion0_trg_addr                           
+00000000  __TI_ATRegion1_region_sz                          
+00000000  __TI_ATRegion1_src_addr                           
+00000000  __TI_ATRegion1_trg_addr                           
+00000000  __TI_ATRegion2_region_sz                          
+00000000  __TI_ATRegion2_src_addr                           
+00000000  __TI_ATRegion2_trg_addr                           
+00000000  __TI_static_base__                                
+00000000  interruptVectors                                  
+000000c1  __TI_printfi                                      
+00000200  __STACK_SIZE                                      
+00000ac1  _Recorder_Execution                               
+00000e41  _CHRGR_Set_LED_Indicator                          
+0000114d  main                                              
+000013cd  _CHRGR_Manage_Charger_Operations_State            
+00001829  _Recorder_Check                                   
+00001c05  _CHRGR_Get_Charger_State                          
+00001dd1  __aeabi_dsub                                      
+00001dd1  __subdf3                                          
+00001ddb  __adddf3                                          
+00001ddb  __aeabi_dadd                                      
+00001f63  ADC0_IRQHandler                                   
+00001f63  ADC1_IRQHandler                                   
+00001f63  AES_IRQHandler                                    
+00001f63  CANFD0_IRQHandler                                 
+00001f63  DAC0_IRQHandler                                   
+00001f63  DMA_IRQHandler                                    
+00001f63  Default_Handler                                   
+00001f63  GROUP0_IRQHandler                                 
+00001f63  GROUP1_IRQHandler                                 
+00001f63  HardFault_Handler                                 
+00001f63  I2C0_IRQHandler                                   
+00001f63  I2C1_IRQHandler                                   
+00001f63  NMI_Handler                                       
+00001f63  PendSV_Handler                                    
+00001f63  RTC_IRQHandler                                    
+00001f63  SPI0_IRQHandler                                   
+00001f63  SPI1_IRQHandler                                   
+00001f63  SVC_Handler                                       
+00001f63  SysTick_Handler                                   
+00001f63  TIMA0_IRQHandler                                  
+00001f63  TIMA1_IRQHandler                                  
+00001f63  TIMG12_IRQHandler                                 
+00001f63  TIMG6_IRQHandler                                  
+00001f63  TIMG7_IRQHandler                                  
+00001f63  TIMG8_IRQHandler                                  
+00001f63  UART0_IRQHandler                                  
+00001f63  UART1_IRQHandler                                  
+00001f63  UART2_IRQHandler                                  
+00001f63  UART3_IRQHandler                                  
+00001f65  _CHRGR_Lastest_Err_LED_Indicator                  
+000020e5  TIMG0_IRQHandler                                  
+00002245  DL_FlashCTL_unprotectSector                       
+000023a1  _CTRL_getFxDfromVIDualLoopController              
+00002739  DL_Timer_initPWMMode                              
+00002849  _Write_Data_To_Flash                              
+00002955  __aeabi_ddiv                                      
+00002955  __divdf3                                          
+00002a61  DL_Timer_initTimerMode                            
+00002b61  DL_SYSCTL_configSYSPLL                            
+00002c4d  DL_TimerA_initPWMMode                             
+00002d39  __aeabi_dmul                                      
+00002d39  __muldf3                                          
+00002e1d  ldexp                                             
+00002e1d  ldexpl                                            
+00002e1d  scalbn                                            
+00002e1d  scalbnl                                           
+00002ef5  SYSCFG_DL_PWM_0_init                              
+00002fb1  _Move_Data_From_Sector_to_Sector                  
+00003055  __udivmoddi4                                      
+000030f7  __aeabi_idiv0                                     
+000030f9  HAL_setLEDsignals                                 
+00003199  memcpy                                            
+00003233  __aeabi_ldiv0                                     
+00003235  _Record_Data_Update                               
+000032cd  SYSCFG_DL_UART_0_init                             
+00003359  __aeabi_fmul                                      
+00003359  __mulsf3                                          
+000033e5  __aeabi_fdiv                                      
+000033e5  __divsf3                                          
+00003469  _PRFL_lookup3StageCharging                        
+000034e9  SYSCFG_DL_ADC12_0_init                            
+00003561  _CHRGR_Execute_Charging_State                     
+000035d9  __TI_decompress_lzss                              
+00003651  SYSCFG_DL_GPIO_init                               
+000036c5  SYSCFG_DL_initPower                               
+00003735  __gedf2                                           
+00003735  __gtdf2                                           
+000037a5  __cmpdf2                                          
+000037a5  __eqdf2                                           
+000037a5  __ledf2                                           
+000037a5  __ltdf2                                           
+000037a5  __nedf2                                           
+00003811  _CHRGR_Execute_Close_Loop                         
+000038e1  __aeabi_dcmpeq                                    
+000038f5  __aeabi_dcmplt                                    
+00003909  __aeabi_dcmple                                    
+0000391d  __aeabi_dcmpge                                    
+00003931  __aeabi_dcmpgt                                    
+00003943  memset                                            
+000039a5  SYSCFG_DL_SYSCTL_init                             
+00003a01  frexp                                             
+00003a01  frexpl                                            
+00003a5d  SYSCFG_DL_FANPWM_init                             
+00003ab5  SYSCFG_DL_init                                    
+00003b0d  __TI_ltoa                                         
+00003bbd  __aeabi_idiv                                      
+00003bbd  __aeabi_idivmod                                   
+00003c69  HAL_initSystem                                    
+00003cbd  PRFL_getTemperatureDeratingCurrent                
+00003d11  SYSCFG_DL_COMP_0_init                             
+00003d65  SYSCFG_DL_ISRTIMER_init                           
+00003e5d  _CHRGR_Execute_System_Stop                        
+00003ead  DL_ADC12_setClockConfig                           
+00003ef9  DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK             
+00003f45  DL_UART_init                                      
+00003f91  _CHRGR_Execute_HandShake_State                    
+00003fdd  copy_in                                           
+00004029  __TI_auto_init_nopinit                            
+00004075  __aeabi_d2iz                                      
+00004075  __fixdfsi                                         
+000040bf  DL_DMA_initChannel                                
+00004105  PRFL_getTemperatureDeratingFAN                    
+00004149  DL_Timer_setCaptureCompareOutCtl                  
+00004189  HAL_setPFM                                        
+000041c9  _CHRGR_Execute_Battery_Check_State                
+00004209  __aeabi_uidiv                                     
+00004209  __aeabi_uidivmod                                  
+00004249  __aeabi_f2d                                       
+00004249  __extendsfdf2                                     
+00004289  atoi                                              
+00004305  DL_Timer_setCaptureCompareCtl                     
+00004341  __muldsi3                                         
+00004425  Waiting                                           
+0000445d  _CTRL_Reset_Dual_Controller                       
+00004495  __aeabi_f2iz                                      
+00004495  __fixsfsi                                         
+000044cd  sprintf                                           
+00004505  DL_Timer_setCaptCompUpdateMethod                  
+00004539  DL_Timer_setCaptureCompareAction                  
+0000456d  DL_Timer_setCaptureCompareInput                   
+000045a1  DL_Timer_setClockConfig                           
+000045d5  DL_Timer_setFaultSourceConfig                     
+00004609  DL_FlashCTL_eraseMemoryFromRAM                    
+000046a9  DL_Timer_setCaptureCompareValue                   
+000046d5  HAL_setPFWM                                       
+00004701  SYSCFG_DL_MACHINECYCLETIMER_init                  
+0000472d  __aeabi_i2d                                       
+0000472d  __floatsidf                                       
+00004821  DL_Timer_getCaptureCompareValue                   
+00004849  Delay_100us                                       
+00004871  _CHRGR_Execute_Soft_Start_State                   
+00004899  __aeabi_ui2f                                      
+00004899  __floatunsisf                                     
+000048c1  _c_int00_noargs                                   
+000048e9  DL_FlashCTL_programMemoryFromRAM64WithECCGenerated
+0000490d  DL_UART_setClockConfig                            
+00004931  __aeabi_lmul                                      
+00004931  __muldi3                                          
+00004955  memccpy                                           
+000049d9  __aeabi_llsl                                      
+000049d9  __ashldi3                                         
+000049f9  HAL_receiveUARTMessage                            
+00004a15  HAL_transmitUARTMessage                           
+00004a61  SYSCFG_DL_DMA_CH_RX_init                          
+00004a79  SYSCFG_DL_DMA_CH_TX_init                          
+00004abf  __TI_zero_init_nomemset                           
+00004ad5  DL_Common_delayCycles                             
+00004b11  __aeabi_uldivmod                                  
+00004b39  __TI_decompress_none                              
+00004b6d  wcslen                                            
+00004b8d  __aeabi_memset                                    
+00004b8d  __aeabi_memset4                                   
+00004b8d  __aeabi_memset8                                   
+00004bb5  SYSCFG_DL_DMA_init                                
+00004bc1  _CTRL_Get_Ramp_Up_Value                           
+00004bfd  __aeabi_errno_addr                                
+00004c05  __aeabi_memcpy                                    
+00004c05  __aeabi_memcpy4                                   
+00004c05  __aeabi_memcpy8                                   
+00004c11  Reset_Handler                                     
+00004c15  _system_pre_init                                  
+00004c18  C$$EXIT                                           
+00004c19  abort                                             
+00004c20  __aeabi_ctype_table_                              
+00004c20  __aeabi_ctype_table_C                             
+00004fec  __TI_Handler_Table_Base                           
+00004ff8  __TI_Handler_Table_Limit                          
+00005000  __TI_CINIT_Base                                   
+00005010  __TI_CINIT_Limit                                  
+00005010  __TI_CINIT_Warm                                   
+00005010  __TI_table_binit                                  
+00005010  __binit__                                         
+00005010  binit                                             
+20200000  __start___llvm_prf_bits                           
+20200000  __start___llvm_prf_cnts                           
+20200000  __stop___llvm_prf_bits                            
+20200000  __stop___llvm_prf_cnts                            
+20200000  gPWM_0Backup                                      
+202000bc  gFANPWMBackup                                     
+20200134  gMACHINECYCLETIMERBackup                          
+202001ac  txUART                                            
+20200210  ReadPackage                                       
+20200240  WritePackage                                      
+20200270  gUART_0Backup                                     
+202002a0  ADCbuffer                                         
+202002ac  Charge_Time_10ms                                  
+202002b0  Global_Time                                       
+202002b4  Over_Time_Threshold                               
+202002b8  WatchDog_Time                                     
+202002bd  Charger_State                                     
+202002be  Print_Saved_State                                 
+202002bf  rxUART                                            
+2020033c  __aeabi_errno                                     
+20200340  D                                                 
+20200342  Fsw                                               
+20200344  Tsw                                               
+20200348  time_measure                                      
+20203e00  __stack                                           
+20204000  __STACK_END                                       
+ffffffff  __TI_pprof_out_hndl                               
+ffffffff  __TI_prof_data_size                               
+ffffffff  __TI_prof_data_start                              
+UNDEFED   __mpu_init                                        
+UNDEFED   _system_post_cinit                                
+
+[227 symbols]
